@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Beak1000 {
 
 	public static void main(String[] args) {
-		//¹®Á¦ : µÎ Á¤¼ö A¿Í B¸¦ ÀÔ·Â¹ŞÀº ´ÙÀ½, A+B¸¦ Ãâ·ÂÇÏ´Â ÇÁ·Î±×·¥À» ÀÛ¼ºÇÏ½Ã¿À.
+		//ë¬¸ì œ : ë‘ ì •ìˆ˜ Aì™€ Bë¥¼ ì…ë ¥ë°›ì€ ë‹¤ìŒ, A+Bë¥¼ ì¶œë ¥í•˜ëŠ” í”„ë¡œê·¸ë¨ì„ ì‘ì„±í•˜ì‹œì˜¤.
 		Scanner sc = new Scanner(System.in);
 		int a = sc.nextInt();
 		int b = sc.nextInt();

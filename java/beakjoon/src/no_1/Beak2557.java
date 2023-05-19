@@ -4,7 +4,7 @@ public class Beak2557 {
 
 	public static void main(String[] args) {
 
-		//¹®Á¦ : Hello World!¸¦ Ãâ·ÂÇÏ½Ã¿À.
+		//ë¬¸ì œ : Hello World!ë¥¼ ì¶œë ¥í•˜ì‹œì˜¤.
 		
 		System.out.print("Hello World!");
 		
