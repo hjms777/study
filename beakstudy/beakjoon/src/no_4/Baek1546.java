@@ -22,17 +22,37 @@ public class Baek1546 {
 		
 		Scanner sc = new Scanner(System.in);
 		
-//		int N = sc.nextInt(); //과목 갯수
+		int N = sc.nextInt(); //과목 갯수
+		double a[] = new double[N];
 		
-//		double a[] = {(40/80)*100,(80/80)*100,(60/80)*100};
-//		System.out.println(a[0]);
-//		System.out.println(a[1]);
-//		System.out.println(a[2]);
+		for(int i = 0; i<N; i++) {
+			a[i] = sc.nextDouble(); 
+		}
 		
-		float a = 3/10*100;
-		float b = 10;
-		double c = 50/70*100;
-		System.out.println((c+70)/2);
+		for(int i = 0; i<N; i++){
+			for(int j = i+1; j<N; j++) {
+				if(a[i]<a[j]) {
+					double temp = a[j];
+					a[j] = a[i];
+					a[i] = temp;
+				}
+			}
+		}
+	
+		double all = 0;
+
+		for(int i = 0; i<N; i++) {
+				all += a[i]/a[0]*100;
+		}
+		
+		double ans = all/N;
+		
+		System.out.println(ans);
+		/*
+		 * 내가 문제를 이해하는데 시간이 오래걸렸다
+		 * 주어진 점수에서 가장 큰 값을 구하고
+		 * 해당 점수와 동일한 값을 포함한 모든점수를 (점수/최대값*100)을 구하면된다
+		 */
 	}
 
 }
