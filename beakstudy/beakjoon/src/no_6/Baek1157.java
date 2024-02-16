@@ -17,32 +17,35 @@ public class Baek1157 {
 		*/
 		
 		Scanner sc = new Scanner(System.in);
-		
-		String ans = sc.next().toLowerCase();
+
+		String ans = sc.next().toUpperCase();
 		
 		int eng[] = new int[26];
-		
-		for(int i = 0; i<ans.length(); i++) {
-			
-			for(int j = 0; j<eng.length; j++) {
-			
-				char a = (char) (97 + j);
-				if(String.valueOf(a).equals(String.valueOf(ans.charAt(i)))) {
-					eng[j]++;
+
+		for (int i = 0; i < ans.length(); i++) {
+			char chr = ans.charAt(i);
+
+			for (int j = 0; j < eng.length; j++) {
+				if (chr == 65 + j) {
+					eng[j] += 1;
 				}
 			}
-			
 		}
-		
-		String many = "97"; 
-		int dap = eng[0];
-		
-		for(int i = 1; i<eng.length; i++) {
-			if(eng[i]>dap) {
-				dap = eng[i];
-				many = String.valueOf((97+i));
+
+		int chk = -1;
+		int askii = 0;
+		char a = '?';
+
+		for (int i = 0; i < eng.length; i++) {
+			if (eng[i] > chk) {
+				askii = 56 + i;
+				chk = eng[i];
 			}
+
 		}
+
+
+		System.out.println(a);
 		
 	}
 
